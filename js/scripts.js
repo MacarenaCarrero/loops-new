@@ -32,6 +32,7 @@ const wordFilter = words => {
 
   for (const word of words) {
     if (vowels.includes(word.charAt(0).toUpperCase())) {
+      //dentro de las vocales esta la primera posición de la palabra
       newWords.push(word);
     }
   }
@@ -47,7 +48,7 @@ const averageScores = () => {
   let cuantityScores = scores.length;
 
   for (const score of scores) {
-    average = average + score;
+    average += score; // siempre es + y = no al revés
   }
   const numbers = average / cuantityScores;
   console.log(`La media es ${numbers}. Total de elementos: ${cuantityScores} `);
